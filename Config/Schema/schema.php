@@ -15,6 +15,11 @@ class MediaSchema extends CakeSchema {
 		'ref_id' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'key' => 'index', 'collate' => NULL, 'comment' => ''),
 		'file' => array('type' => 'string', 'null' => true, 'default' => NULL, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'charset' => 'latin1'),
 		'position' => array('type' => 'integer', 'null' => true, 'default' => '0', 'collate' => NULL, 'comment' => ''),
+		'height' => array('type' => 'integer', 'null' => true, 'length' => 6, 'default' => null, 'collate' => NULL, 'comment' => ''),
+		'width' => array('type' => 'integer', 'null' => true, 'length' => 6, 'default' => null, 'collate' => NULL, 'comment' => ''),
+		'x_pos' => array('type' => 'integer', 'null' => true, 'length' => 6, 'default' => null, 'collate' => NULL, 'comment' => ''),
+		'y_pos' => array('type' => 'integer', 'null' => true, 'length' => 6, 'default' => null, 'collate' => NULL, 'comment' => ''),
+
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'ref' => array('column' => 'ref', 'unique' => 0), 'ref_id' => array('column' => 'ref_id', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'InnoDB')
 	);
